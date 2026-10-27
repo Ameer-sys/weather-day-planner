@@ -10,7 +10,8 @@
     "check": "node --check server.mjs && node --check backend.mjs && node --check app.js && node --check weather.js && node --check guidance.js",
     "test": "node --test test/*.test.mjs",
     "build": "node scripts/build.mjs",
-    "test:browser": "node scripts/verify-browser.cjs"
+    "test:browser": "node scripts/verify-browser.cjs",
+    "test:layout": "node scripts/verify-layout.cjs"
   },
   "engines": {
     "node": ">=22"

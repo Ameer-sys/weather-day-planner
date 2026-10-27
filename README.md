@@ -51,6 +51,8 @@ The build copies only six approved browser assets to `dist/`. API code stays ser
 
 Set `ATMOS_TEST_URL=https://weather-day-planner.vercel.app` to run those browser checks against the deployed app. Test-only responses and saved plans remain isolated to the test browser.
 
+`npm run test:layout` uses the same Playwright setup to check all six pages at 1440, 1920, 2560, 3440, 768 and 390 CSS pixels. It checks viewport coverage, overflow, desktop padding, chart proportions and containment, plus ultrawide error-state layout. Screenshots are saved in `artifacts/layout/` for visual review.
+
 ## Project structure
 
 | Path | Purpose |

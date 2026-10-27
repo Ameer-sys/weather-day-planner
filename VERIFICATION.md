@@ -2,6 +2,12 @@
 
 For the October 27 clarity update and verified public deployment (22 tests, six build assets), see [RELEASE.md](RELEASE.md). The evidence below records the original October 26 baseline.
 
+## Full-width layout update — October 27, 2026
+
+Local working-tree verification in Microsoft Edge: the original shell measured 1920px at a 3440px viewport. The width cap is removed; the sidebar starts at x=0 and the main area reaches the viewport's right edge. Desktop content padding stays within 24–32px. At 2200px and wider, a fourth grid column holds Intelligence and watched activities; chart proportions and readable text measures are preserved.
+
+`npm run test:layout` passed all 36 page/viewport combinations (six pages at 1440, 1920, 2560, 3440, 768 and 390px), including chart containment and equal horizontal/vertical SVG scaling. Screenshots at each size were visually inspected. An ultrawide stale-data banner introduced no overlapping cards, and animations still run when reduced motion is off. No document horizontal overflow or JavaScript page errors were found. Syntax checks, all 22 automated tests and the production build also passed. This section records local changes, not a new production deployment.
+
 Verified on October 26, 2026 (America/New_York), using Node 24.22.1 and installed Microsoft Edge on Windows. The supplied project was copied into this previously empty workspace; Downloads was not edited.
 
 ## Commands and observed results

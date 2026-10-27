@@ -2,6 +2,8 @@
 
 Plan an outing with a clearer view of the weather. ATMOS brings live forecasts, hourly rain and snow charts, saved plans, and simple weather guidance into a dark navy and electric-blue dashboard.
 
+**[Open ATMOS](https://weather-day-planner.vercel.app)** · [Public source repository](https://github.com/Ameer-sys/weather-day-planner) · [Latest release checks](RELEASE.md)
+
 ![ATMOS weather dashboard](assets/desktop-live.png)
 
 [Mobile view](assets/mobile-live.png) · [Verification](VERIFICATION.md) · [Deployment guide](DEPLOYMENT.md)
@@ -46,6 +48,8 @@ npm run build
 The build copies only six approved browser assets to `dist/`. API code stays server-side. GitHub Actions runs these same checks on pushes and pull requests.
 
 `npm run test:browser` additionally uses an existing Playwright installation and Microsoft Edge. It verifies real Hamilton API calls, then isolated failure/race fixtures and responsive screens. Set `PLAYWRIGHT_MODULES` to the absolute path of an existing `node_modules` directory when needed. Local screenshots and evidence are written to ignored `artifacts/`.
+
+Set `ATMOS_TEST_URL=https://weather-day-planner.vercel.app` to run those browser checks against the deployed app. Test-only responses and saved plans remain isolated to the test browser.
 
 ## Project structure
 

@@ -6,7 +6,7 @@ const {chromium}=req('playwright');
 (async()=>{
  const {createServer}=await import('../backend.mjs');
  const server=createServer();await new Promise(r=>server.listen(0,'127.0.0.1',r));
- const base=`http://127.0.0.1:${server.address().port}`;
+ const base=process.env.ATMOS_TEST_URL||`http://127.0.0.1:${server.address().port}`;
  const browser=await chromium.launch({channel:'msedge',headless:true,chromiumSandbox:true});
  const errors=[],checks=[];fs.mkdirSync('artifacts',{recursive:true});
  try{

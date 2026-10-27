@@ -2,6 +2,8 @@
 
 This remains the existing vanilla JavaScript/Node app. No framework migration or runtime dependencies were introduced. Node 22+ is required.
 
+Published source: https://github.com/Ameer-sys/weather-day-planner. Live application: https://weather-day-planner.vercel.app. The connected Vercel project uses Node 24 and the `main` production branch.
+
 ## Local verification
 
 ```sh
@@ -27,7 +29,7 @@ Import the repository into your intended Vercel account/project. Use the reposit
 
 Only six explicit public assets are copied to `dist`. Root `api/*.mjs` functions reuse `backend.mjs` for forecast, geocoding and optional advice. Server source and environment files are never included in the public build. These adapters use Vercel's documented [Node request/response interface](https://vercel.com/docs/functions/runtimes/node-js).
 
-Before promoting a preview, verify:
+Before releasing the same source revision to production, verify the preview:
 
 - `/api/forecast?lat=43.2557&lon=-79.8711` returns a Toronto-timezone forecast, including the requested date if still within range.
 - `/api/search?q=Hamilton` returns Hamilton, Ontario.

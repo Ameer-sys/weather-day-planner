@@ -21,4 +21,14 @@
 
 ## Publishing
 
-Public GitHub repository and Vercel project: **weather-day-planner**. Publication and deployment verification are in progress; final URLs and results will be recorded here after they are confirmed. No GitHub Pages configuration or custom-domain purchase is planned.
+- Public source: https://github.com/Ameer-sys/weather-day-planner
+- Live website: https://weather-day-planner.vercel.app
+- Staging preview: https://weather-day-planner-bcpxilxh8-ameer-sys-projects.vercel.app (Vercel authentication may be required).
+- Application revision: `c4e2a4f0fe00de70f7b814fe1344cd9a59294efd`. GitHub Actions passed for this revision.
+- Both deployments returned real Hamilton search results and a Toronto-timezone forecast with 24 hourly intervals on October 29, 2026.
+- All 12 browser workflow groups also passed against the public production URL, with no JavaScript page errors. Production desktop and mobile Intelligence screenshots were visually reviewed.
+- Anonymous production requests confirmed paid advice is disabled (503), invalid coordinates are rejected (400), and environment/Git/server files are unavailable (404). All four JavaScript/CSS application modules matched local source exactly.
+- The first Vercel deployment was assigned to production despite requesting preview. A separate staging deployment was then built and its page, weather and search responses verified. This release record preserves that ordering rather than claiming a preview-first initial launch.
+- No credentials were detected in the 37 initially staged files. Secrets and Vercel metadata remain ignored; `.env.example` contains placeholders only.
+- The final test rerun required approved localhost access because the sandbox returned `EACCES`; all 22 tests passed with that access. A Vercel error/fatal log scan over the verification period found no matching logs. Continuous uptime monitoring is not configured.
+- No GitHub Pages configuration, custom-domain purchase or paid AI call was made. `weatherdayplanner.com` remains a future preference only.

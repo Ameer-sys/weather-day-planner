@@ -1,5 +1,7 @@
 # ATMOS v2 verification
 
+For the October 27 clarity update and verified public deployment (22 tests, six build assets), see [RELEASE.md](RELEASE.md). The evidence below records the original October 26 baseline.
+
 Verified on October 26, 2026 (America/New_York), using Node 24.22.1 and installed Microsoft Edge on Windows. The supplied project was copied into this previously empty workspace; Downloads was not edited.
 
 ## Commands and observed results

@@ -1,0 +1,17 @@
+.git
+.env*
+!.env.example
+artifacts
+assets/*-demo.png
+assets/*-live.png
+assets/ui-reference.png
+assets/intelligence.png
+test
+node_modules
+coverage
+playwright-report
+test-results
+*.pem
+*.key
+*.p12
+*.pfx

@@ -1,0 +1,18 @@
+{
+  "name": "weather-day-planner",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "description": "ATMOS — Your Weather & Outdoor Planning Dashboard",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check server.mjs && node --check backend.mjs && node --check app.js && node --check weather.js && node --check guidance.js",
+    "test": "node --test test/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "test:browser": "node scripts/verify-browser.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
